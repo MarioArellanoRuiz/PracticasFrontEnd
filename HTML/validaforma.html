@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.serializejson.js"></script>
+        <title>Mi primer blog</title>
+        
+    </head>
+    <body>
+        <div>
+            <form id="myform" action="" method="post">
+                <input type="text" name="nombre" required="true" placeholder="Name"><br>
+                <input type="tel" name="telefono" required="true" placeholder="Phone Number"><br>
+                <input type="email" name="email" required="true" placeholder="email"><br>
+                <input type="password" name="password" required="true" placeholder="password"><br>
+                <input type="checkbox" id="cheq" value= "terms"><br>
+                <button id="boton" onclick="serializar()" >Click</button>I agree to the terms and conditions and Privacity Policy
+            </form>
+
+            <script>
+                function serializar()
+                {
+                    
+                        var text = "";
+                        //alert(navigator.platform);
+                        //alert($('#cheq').is(':checked'));
+                        if(document.getElementById("cheq").checked){
+                            
+                            text = $('#myform').serializeJSON();
+                            
+                            if(text.nombre=="" ||  text.telefono!="" || text.email!="" || text.passwordSS!="")
+                                {
+                               console.log(text);
+                               alert(text.nombre+"\n"+text.telefono+"\n"+text.email+"\n"+text.password) ;
+                                }
+                            else{
+                                 console.log(text); 
+                                alert("llene los campos obligatorios");
+                                }
+
+                        }else{
+                            alert("Acepte los terminos y condiciones!");
+                        }
+                       
+                }
+            </script>
+        </div>
+    </body>
+</html>
+

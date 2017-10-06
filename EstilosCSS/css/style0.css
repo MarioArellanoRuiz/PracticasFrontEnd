@@ -1,0 +1,27 @@
+h1{
+    color: cornflowerblue;
+    font-family: "Verdana", Times, sefirf;
+}
+h3{
+    color: cornflowerblue;
+    font-family: "Verdana", Times, sefirf;
+}
+p{
+    color: white;
+    font-family: "Verdana", Times, sefirf;
+    font-size: x-small;
+}
+.myH1{
+    color: cornflowerblue;
+    font-family: "Verdana", Times, sefirf;
+}
+body{
+    background-color: dimgray;
+}
+.myYellowP{
+    color: yellow;
+}
+a{
+    color: brown;
+}
+
