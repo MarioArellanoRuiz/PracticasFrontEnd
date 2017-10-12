@@ -184,5 +184,124 @@ function manejarArreglos(){
         console.log(miArreglo[t]);
         }
      }
+
+    console.log("For in");
+     for(var e in miArreglo){
+         console.log(miArreglo[e]);
+         miArreglo[e]=-1;
+     }
+    //console.clear();
+    console.log(miArreglo);
    
 }
+var cadena= "soy una variable global! :)";
+function llamandoAlert(){
+
+    alert("Hola, "+cadena);
+
+}
+
+//variable global objeto
+
+var persona = {
+    nombre: "Juan",
+    edad: 25,
+    colorDeOjos: "verde"
+}
+
+function manejarObjeto(){
+var dinamico = "nombre";
+console.log(persona);
+console.log(persona.nombre);
+console.log(persona["nombre"]);
+console.log(persona[dinamico]);
+console.log(Object.keys(persona));
+
+var automovil = {
+    marca: "Nissan",
+    submarca: "Frontier",
+    modelo: "2018",
+    color: "Rojo"
+
+}
+
+var dinamico = "";
+console.log(automovil);
+console.log(automovil.nombre);
+console.log(automovil["nombre"]);
+console.log(automovil[dinamico]);
+console.log(Object.keys(automovil));
+
+var pet = {
+    nombre: "Perrito",
+    especie: "Canino",
+    edad: 1 ,
+    corre: true
+
+}
+
+var dinamico = "";
+console.log(pet);
+console.log(pet.nombre);
+console.log(pet["nombre"]);
+console.error(pet[dinamico]);
+console.log(Object.keys(pet));
+
+var celular = {
+    marca: "Samsung",
+    modelo: "Samsung S10",
+    alamacenamiento: "64 BG",
+    SO: "android"
+
+}
+
+var dinamico = "hola";
+var arr=["marca", "modelo", "alamacenamiento", "SO"];
+dinamico=arr[getRandomInt(3,0)]
+
+
+
+console.log(celular);
+console.log(celular.nombre);
+console.log(celular[0]);
+console.log(celular[dinamico]);
+console.log(Object.keys(celular));
+
+var codigo="alert('codigo eval');";
+eval(codigo);
+
+}
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+
+  function manejarObjeto2(){
+
+    var automovil = {
+        marca: "Nissan",
+        submarca: "Frontier",
+        modelo: "2018",
+        color: "Rojo",
+        miFuncion: function unaFuncion(){
+                console.log("Una funcion interna");
+        }
+    }
+    automovil.miFuncion();
+  }
+
+  function manejandoJSON(){
+
+    var miJauria={
+        nombre : "perrito",
+        raza : {
+            nombre: "bichon",
+            origen : "Europa"
+        }
+    }
+
+    console.log(miJauria.nombre.nombre);
+
+
+  }

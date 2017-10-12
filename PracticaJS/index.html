@@ -1,14 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
         <meta http-equiv="Expires" content="0">
         <meta http-equiv="Last-Modified" content="0">
         <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
         <meta http-equiv="Pragma" content="no-cache">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!--Style -->
+        <style type="text/css">
+            .alert{
+                padding: 20px;
+                background-color: gray;
+                color:white;
+                transition: opacity 0.6s;
+                margin-bottom: 15px;
+            }
+            .alert.success {background-color: rgb(51, 153, 59)}
+            .alert.info {background-color: rgb(101, 111, 224)}
+            .alert.warning {background-color: rgb(218, 69, 69)}
+
+        </style>
+
+        <title>Document</title>
 </head>
 <body>
     <button onclick="myFunction()">variables</button>
@@ -19,6 +35,30 @@
     <button onclick="operacionesLogicas()">Operaciones aritmeticas</button>
     <button onclick="mySwitch()">Operaciones aritmeticas</button>
     <button onclick="manejarArreglos()">Arrays</button>
+    <button onclick="llamandoAlert()">Alertas</button>
+    <button onclick="manejarObjeto()">Objetos</button>
+    <button onclick="manejarObjeto2()">Objetos2</button>
+
+    
+    <!-- ALertas Personalizadas -->
+    <div class="alert success">
+        <span class="closebtn">&times;</span>
+            <strong>Indicates a successful or positive action</strong>
+        </span>
+    </div>
+    <div class="alert info">
+            <span class="closebtn">&times;</span>
+                <strong>Show you information</strong>
+            </span>
+    </div>
+    <div class="alert warning">
+            <span class="closebtn">&times;</span>
+                <strong>Indicates danger!</strong>
+            </span>
+    </div>
+
+    
+
     <!-- enlazando js -->
 <script type="text/javascript">
 function operacionesAritmeticas(){
@@ -34,7 +74,27 @@ function operacionesAritmeticas(){
         }
 </script>
 
+
 <script type="text/javascript"  src="js/script.js"> </script>
+
+<script type="text/javascript">
+//busca elelmento cliqueado
+    var close = document.getElementsByClassName("closebtn");
+    var i;
+//trabajar sobre el elemento cliqueado
+    for(i=0;i<close.length;i++){
+        //al elemento se le da un nuevo evento
+        close[i].onclik=function(){
+        //Obtener el elemento padre
+        var div = this.parentElement;
+        div.style.opacity="0";
+        setTimeout(function(){div.style.display="none";},600);
+        }
+    }
+
+</script>
+
+
 
 </body>
 </html>

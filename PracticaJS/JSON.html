@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Metodos con cadenas JS</title>
+   
+</head>
+ 
+<body>
+    <h1>Practica con JSON</h1>
+    <form id="form1">
+        Nombre:<br><input type="text" name="texto" value="" id="nombre" class="formulario">              
+    </form>
+    <input type="button" value="obtener el nombre" onclick="manejandoJSON()">
+        
+    <script type="text/javascript" >
+        function manejandoJSON(){
+        var miJauria={
+            nombre : "perrito",
+            raza : {
+                nombre: "bichon",
+                origen :"Europa"
+            }
+            
+        }
+
+        console.log(miJauria.nombre.nombre);
+  }
+    </script>
+</body>
+</html>
